@@ -45,40 +45,40 @@ export default function Header() {
 
   // Smooth scroll handler
   useEffect(() => {
-  let ticking = false;
+    let ticking = false;
 
-  const handleScroll = () => {
-    const currentY = window.scrollY;
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        // If the top strip is closed by the user, stop changing condensed/showTopStrip.
-        if (!topStripVisible) {
-          // keep lastScrollY synced so future openings behave correctly
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          // If the top strip is closed by the user, stop changing condensed/showTopStrip.
+          if (!topStripVisible) {
+            // keep lastScrollY synced so future openings behave correctly
+            lastScrollY.current = currentY;
+            ticking = false;
+            return;
+          }
+
+          const scrollingDown = currentY > lastScrollY.current;
+
+          if (scrollingDown && currentY > 36) {
+            setShowTopStrip(false);
+            setCondensed(true);
+          } else {
+            setShowTopStrip(true);
+            setCondensed(currentY > 36);
+          }
+
           lastScrollY.current = currentY;
           ticking = false;
-          return;
-        }
+        });
+        ticking = true;
+      }
+    };
 
-        const scrollingDown = currentY > lastScrollY.current;
-
-        if (scrollingDown && currentY > 36) {
-          setShowTopStrip(false);
-          setCondensed(true);
-        } else {
-          setShowTopStrip(true);
-          setCondensed(currentY > 36);
-        }
-
-        lastScrollY.current = currentY;
-        ticking = false;
-      });
-      ticking = true;
-    }
-  };
-
-  window.addEventListener("scroll", handleScroll, { passive: true });
-  return () => window.removeEventListener("scroll", handleScroll);
-}, [topStripVisible]);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [topStripVisible]);
 
 
   return (

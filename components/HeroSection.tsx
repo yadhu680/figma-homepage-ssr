@@ -20,6 +20,7 @@ export default function HeroSection() {
             component="img"
             src="/images/hero.png"
             alt="hero image"
+            loading="lazy"
             sx={{
                 width: { xs: "390px", md: "100%" },
                 height: { xs: "448px", md: "707px" },
@@ -33,6 +34,7 @@ export default function HeroSection() {
             component="img"
             src="/images/Rectangle_6.png"
             alt="banner background image"
+            loading="lazy"
             sx={{
                 width: { xs: "100%", md: "0" },
                 height: { xs: "410px", md: "0" },
@@ -45,6 +47,7 @@ export default function HeroSection() {
             component="img"
             src="/images/Rectangle_2.png"
             alt="mobile banner image"
+            loading="lazy"
             sx={{
                 width: { xs: "100%" },
                 display: { xs: "block", md: "none" }, 
@@ -109,6 +112,7 @@ export default function HeroSection() {
             component="img"
             src="/images/vector.png"
             alt="vector image"
+            loading="lazy"
             sx={{
                 width: { xs: 44, md: 56 },
                 height: { xs: 44, md: 56 },      
@@ -123,6 +127,7 @@ export default function HeroSection() {
             component="img"
             src="/images/vector.png"
             alt="vector image"
+            loading="lazy"
             sx={{
                 width: { xs: 76, md: 104 },
                 height: { xs: 76, md: 104 },      
@@ -167,10 +172,8 @@ export default function HeroSection() {
                 { value: "30,000+", label: "Happy Customers" },
             ].map((item, index) => (
                 <Grid
-                key={index}
-                item
-                xs={6}
-                md={4}
+                key={index}                                
+                size={{ xs: 6, md: 4 }}
                 sx={{
                     borderRight: {
                     xs: index === 0 ? "1px solid #ccc" : "none",

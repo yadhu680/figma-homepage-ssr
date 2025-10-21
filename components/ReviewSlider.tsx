@@ -159,6 +159,7 @@ const ReviewSlider: React.FC<ReviewSliderProps> = ({
                         component="img"
                         src={`/images/rating_star.png`}
                         alt={`Review Rating`}
+                        loading="lazy"
                         sx={{ display: "flex", width: 110, textAlign: "left", my: 1 }}
                       />
                     </Typography>

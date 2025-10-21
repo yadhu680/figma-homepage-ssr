@@ -23,7 +23,7 @@ export default function ProductCard({ id, name, price, image, originalPrice, dis
 
       <CardMedia component="img"
         sx={{ width: { xs: 175, md: 295 }, height: { xs: 200, md: 298 }, objectFit: "cover", borderRadius: 2 }}
-        image={image || "/images/placeholder.png"} alt={name} 
+        image={image || "/images/placeholder.png"} alt={name} loading="lazy"
       />
 
       <CardContent sx={{ px: 0, pt: 1.5, pb: 0 }}>
@@ -35,6 +35,7 @@ export default function ProductCard({ id, name, price, image, originalPrice, dis
           component="img"
           src={`/images/rating_${rating}.png`}
           alt={`Rating ${rating}`}
+          loading="lazy"
           sx={{ display: "flex", width: 110, height: "auto", textAlign: "left", my: 1 }}
         /> 
 

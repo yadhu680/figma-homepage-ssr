@@ -60,16 +60,14 @@ export default function CategoryWidget() {
       >
         {/* First Row */}
         <Grid
-          container
-          item
-          xs={12}
+          container                    
+          size={{ xs: 12 }}
           spacing={2}
           justifyContent="center"
           alignItems="center"
         >
           {categories.slice(0, 2).map((cat) => (
-            <Grid
-              item
+            <Grid              
               key={cat.title}
               sx={{
                 display: "flex",
@@ -94,6 +92,7 @@ export default function CategoryWidget() {
                 component="img"
                 image={isMobile ? cat.Mobimage : cat.Deskimage}
                 alt={cat.title}
+                loading="lazy"
                 sx={{
                   width: { xs: 300, md: cat.width },
                   height: 180,
@@ -108,16 +107,14 @@ export default function CategoryWidget() {
 
         {/* Second Row */}
         <Grid
-          container
-          item
-          xs={12}
+          container                    
+          size={{ xs: 12 }}
           spacing={2}
           justifyContent="center"
           alignItems="center"
         >
           {categories.slice(2).map((cat) => (
-            <Grid
-              item
+            <Grid              
               key={cat.title}
               sx={{
                 display: "flex",
@@ -142,10 +139,11 @@ export default function CategoryWidget() {
                     component="img"
                     image={isMobile ? cat.Mobimage : cat.Deskimage}
                     alt={cat.title}
+                    loading="lazy"
                     sx={{
-                    width: { xs: 300, md: cat.width },
-                    height: 180,
-                    objectFit: "cover",
+                      width: { xs: 300, md: cat.width },
+                      height: 180,
+                      objectFit: "cover",
                     }}
                 />                
               </Card>

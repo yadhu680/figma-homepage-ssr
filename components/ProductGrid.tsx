@@ -55,7 +55,7 @@ export default function ProductGrid({ heading, products }: ProductGridProps) {
             }}          
             >
             {products.map((p) => (
-                <Grid item key={p.id} xs={6} sm={6} md={3}
+                <Grid key={p.id} size={{ xs: 6, md: 3, sm: 6 }}
                 sx={{
                     display: "flex",
                     justifyContent: "center",

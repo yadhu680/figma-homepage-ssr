@@ -57,7 +57,7 @@ export default function FooterWidget() {
                     }}
                 >                    
                     <Grid container spacing={{ xs: 2, md: 2 }}>                                                                                               
-                        <Grid item xs={12} sx={{ width: { xs: "100%", md: "30%" } }}>
+                        <Grid size={{ xs: 12 }} sx={{ width: { xs: "100%", md: "30%" } }}>
                             <Box sx={{ mb: 2 }}>
                                 <Typography variant="h6" 
                                 sx={{
@@ -84,16 +84,15 @@ export default function FooterWidget() {
                             <Box
                               component="img"
                               src={`/images/social.png`}
-                              alt={`Social Icons`}                              
+                              alt={`Social Icons`}     
+                              loading="lazy"                         
                             />
                         </Grid>
                         
                         {footerLinks.map((col, index) => (
-                            <Grid 
-                                item 
+                            <Grid                                  
                                 key={col.title}
-                                md={2}
-                                xs={ (index === 0 || index === 1) ? 6 : 6 }
+                                size={{ xs: (index === 0 || index === 1) ? 6 : 6, md: 2 }}                                
                                 sx={{
                                   width: { xs: "47%", md: "16%"}
                                 }}
@@ -135,10 +134,8 @@ export default function FooterWidget() {
                         }}
                     >                        
                         {/* Copyright */}
-                        <Grid 
-                            item 
-                            xs={12} 
-                            md={6}                            
+                        <Grid                                                            
+                            size={{ xs: 12, md: 6 }}                     
                             sx={{                                
                                 display: 'flex',
                                 justifyContent: { xs: 'center', md: 'flex-start' },
@@ -156,7 +153,8 @@ export default function FooterWidget() {
                         <Box
                           component="img"
                           src={`/images/payments.png`}
-                          alt={`Payment Cards`}                              
+                          alt={`Payment Cards`}     
+                          loading="lazy"                         
                         />                        
                     </Grid>
                 </Container>

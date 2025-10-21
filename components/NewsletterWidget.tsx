@@ -31,7 +31,7 @@ export default function NewsletterWidget() {
         justifyContent="space-between"
       >
         {/* Left column - Title */}
-        <Grid item xs={12} md={6}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <Typography
             variant="h5"
             sx={{
@@ -50,10 +50,8 @@ export default function NewsletterWidget() {
         </Grid>
 
         {/* Right column - Email input & Button */}
-        <Grid
-          item
-          xs={12}
-          md={6}
+        <Grid                 
+          size={{ xs: 12, md: 6 }}
           sx={{
             display: "flex",
             flexDirection: "column",

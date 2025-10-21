@@ -76,7 +76,7 @@ export default async function Page() {
       <ProductGrid heading="New Arrivals" products={newArrivals} />
       <Box
         sx={{
-          width: { xs: "358px", md: "1340px" },
+          width: { xs: "92%", md: "1340px" },
           height: "1px",
           backgroundColor: "#E0E0E0",
           textAlign: "center",

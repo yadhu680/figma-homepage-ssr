@@ -41,18 +41,16 @@ export default function PromoBanner() {
           alignItems="center"
         >
           {brands.map((brand, index) => (
-            <Grid
-              item
-              key={index}
-              xs={4}  // 3 per row on mobile
-              sm={4}  
-              md={2.4} // 5 per row on desktop
+            <Grid              
+              key={index}              
+              size={{ xs: 4, md: 2.4, sm: 4 }}
               sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
             >
               <Box
                 component="img"
                 src={brand.logo}
                 alt={brand.name}
+                loading="lazy"
                 sx={{
                   maxHeight: { xs: 60, md: 80 },
                   width: { xs: brand.width.xs, md: brand.width.md },
