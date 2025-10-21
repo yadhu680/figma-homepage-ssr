@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'Integral CF';
+  src: url('/fonts/IntegralCF-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Integral CF';
+  src: url('/fonts/IntegralCF-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Optional: Set default body font */
+body {
+  margin: 0; 
+  overflow-x: hidden;
+}
+
+/*:root {
+  --container-width: 1200px;
+}*/
+
+/* Basic reset */
+html,body,#root { height: 100%; }
+
+/* container query example for header content */
+header, .MuiToolbar-root {
+  container-type: inline-size;
+}
+
+
+
+.MuiSvgIcon-root.MuiSvgIcon-colorPrimary {
+    color: #000;
+  }
+
+/* Use a class when you want to hide nav at smaller container widths via CSS only */
+@container (max-width: 600px) {
+  .hide-at-small { display: none !important; }
+}

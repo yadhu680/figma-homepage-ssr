@@ -1,0 +1,166 @@
+"use client";
+
+import { Box, Grid, Typography, Link, Container } from "@mui/material";
+import NewsletterWidget from "../components/NewsletterWidget";
+
+// --- Data Structure for Footer Links ---
+const footerLinks = [
+    { 
+        title: "COMPANY", 
+        links: ["About", "Features", "Works", "Career"] 
+    },
+    { 
+        title: "HELP", 
+        links: ["Customer Support", "Delivery Details", "Terms & Conditions", "Privacy Policy"] 
+    },
+    { 
+        title: "FAQ", 
+        links: ["Account", "Manage Deliveries", "Orders", "Payments"] 
+    },
+    { 
+        title: "RESOURCES", 
+        links: ["Free eBooks", "Development Tutorial", "How to - Blog", "Youtube Playlist"] 
+    },
+];
+
+export default function FooterWidget() {
+    const NEGATIVE_MARGIN_Y_MD = -100;
+    const NEGATIVE_MARGIN_Y_XS = -120;
+        
+    const OVERLAP_MARGIN_XS = NEGATIVE_MARGIN_Y_XS / 8;
+    const OVERLAP_MARGIN_MD = NEGATIVE_MARGIN_Y_MD / 8;
+    
+    return (
+        <>
+            {/* The NewsletterWidget will be the top element */}
+            <NewsletterWidget />
+                        
+            <Box 
+                sx={{ 
+                    width: "100%",                   
+                    backgroundColor: "#F0F0F0",                    
+                    mt: { xs: OVERLAP_MARGIN_XS, md: OVERLAP_MARGIN_MD },                                        
+                    pt: { 
+                        xs: Math.abs(OVERLAP_MARGIN_XS) + 4,
+                        md: Math.abs(OVERLAP_MARGIN_MD) + 5
+                    },                                         
+                    pb: { xs: 4, md: 8 }, 
+                }}
+            >
+                <Container 
+                    sx={{                         
+                        display: "flex",
+                        flexDirection: "column",                                                
+                        mx: { xs: 0, md: 11 },     
+                        maxWidth: { xs: "auto", md: "1340px" },  
+                        px: { xs: 2, md: 0 }                                       
+                    }}
+                >                    
+                    <Grid container spacing={{ xs: 2, md: 2 }}>                                                                                               
+                        <Grid item xs={12} sx={{ width: { xs: "100%", md: "30%" } }}>
+                            <Box sx={{ mb: 2 }}>
+                                <Typography variant="h6" 
+                                sx={{
+                                  fontWeight: "bold",
+                                  fontFamily: "Integral CF, sans-serif",
+                                  fontSize: "30px"
+                                }}
+                                 >
+                                    SHOP.CO
+                                </Typography>
+                                <Typography variant="body2" mt={1} 
+                                sx={{ 
+                                  width: { xs: "95%", md: "64%" }, 
+                                  color: "#727272",
+                                  fontSize: "0.9rem"
+                                }}
+                                >
+                                    We have clothes that suits your style and which you're proud to wear.
+                                    From women to men.
+                                </Typography>
+                            </Box>
+                            
+                            {/* Social Icons */}
+                            <Box
+                              component="img"
+                              src={`/images/social.png`}
+                              alt={`Social Icons`}                              
+                            />
+                        </Grid>
+                        
+                        {footerLinks.map((col, index) => (
+                            <Grid 
+                                item 
+                                key={col.title}
+                                md={2}
+                                xs={ (index === 0 || index === 1) ? 6 : 6 }
+                                sx={{
+                                  width: { xs: "47%", md: "16%"}
+                                }}
+                            >
+                                <Typography variant="subtitle1" fontWeight="500" color="text.primary" mb={2.5}>
+                                    {col.title}
+                                </Typography>
+                                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5}}>
+                                    {col.links.map((linkText) => (
+                                        <Link 
+                                            href="javascript: void(0)" 
+                                            key={linkText} 
+                                            variant="body2" 
+                                            color="#727272"
+                                            fontSize="1rem" 
+                                            sx={{ 
+                                                textDecoration: 'none', 
+                                                '&:hover': { textDecoration: 'underline' } 
+                                            }}
+                                        >
+                                            {linkText}
+                                        </Link>
+                                    ))}
+                                </Box>
+                            </Grid>
+                        ))}
+                        
+                    </Grid>
+                    
+                    {/* --- SEPARATOR --- */}
+                    <Box sx={{ borderTop: 1, borderColor: '#ccc', mt: { xs: 4, md: 6 }, pt: { xs: 3, md: 2 } }} />
+                    
+                    <Grid 
+                        container 
+                        alignItems="center"     
+                        spacing={2}
+                        sx={{
+                          justifyContent: {xs: "center", md: "space-between" }
+                        }}
+                    >                        
+                        {/* Copyright */}
+                        <Grid 
+                            item 
+                            xs={12} 
+                            md={6}                            
+                            sx={{                                
+                                display: 'flex',
+                                justifyContent: { xs: 'center', md: 'flex-start' },
+                            }}
+                        >
+                            <Typography 
+                                variant="body2" 
+                                color="#727272"                                
+                            >
+                                Shop.co &copy; 2000-2023. All Rights Reserved.
+                            </Typography>
+                        </Grid>
+
+                        {/* Payment Icons */}                        
+                        <Box
+                          component="img"
+                          src={`/images/payments.png`}
+                          alt={`Payment Cards`}                              
+                        />                        
+                    </Grid>
+                </Container>
+            </Box>
+        </>
+    );
+}

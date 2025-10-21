@@ -1,0 +1,32 @@
+{
+  "name": "figma-homepage-ssr",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Next.js 15 SSR homepage based on Figma design using React 19 and MUI v7",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --ext .ts,.tsx"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "7.3.3",
+    "@mui/material": "7.3.3",
+    "@mui/system": "7.3.3",
+    "@mui/utils": "7.3.3",
+    "framer-motion": "^12.23.24",
+    "next": "15.0.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.8.1",
+    "eslint": "^9.12.0",
+    "eslint-config-next": "15.0.0",
+    "typescript": "^5.6.3"
+  },
+  "packageManager": "pnpm@10.17.1"
+}
