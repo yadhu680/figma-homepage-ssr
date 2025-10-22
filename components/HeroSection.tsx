@@ -210,7 +210,7 @@ export default function HeroSection() {
             rowSpacing= {{xs: 2, md: 0}}
             sx={{
                 mt: { xs: 3, md: 5 },
-                justifyContent: { xs: "center", md: "flex-start" },
+                justifyContent: { xs: "center", md: "center" },
                 width: { xs: "100%", md: "596px" },    
             }}
             >
@@ -220,20 +220,20 @@ export default function HeroSection() {
                 { value: "30,000+", label: "Happy Customers" },
             ].map((item, index) => (
                 <Grid
-                key={index}                                
-                size={{ xs: 6, md: 4 }}
-                sx={{
-                    borderRight: {
-                    xs: index === 0 ? "1px solid #ccc" : "none",
-                    md: index < 2 ? "1px solid #ccc" : "none",
-                    },
-                    pr: {
-                    xs: index === 0 ? 3 : 0,
-                    md: index < 2 ? 3 : 0,
-                    },
-                    textAlign: "left",
-                    mb: { xs: 0, md: 0 },
-                }}
+                  key={index}                                
+                  size={{ xs: 6, md: 4 }}
+                  sx={{
+                      borderRight: {
+                        xs: index === 0 ? "1px solid #ccc" : "none",
+                        md: index < 2 ? "1px solid #ccc" : "none",
+                      },
+                      pr: {
+                        xs: index === 0 ? 3 : 0,
+                        md: index < 2 ? 4 : 0,
+                      },
+                      textAlign: "center",
+                      mb: { xs: 0, md: 0 },
+                  }}
                 >
                 <Typography
                     variant="h4"
