@@ -12,6 +12,7 @@ import {
   List,
   ListItem,
   ListItemText,
+  ListItemButton,
   Divider,
   Fade,
 } from "@mui/material";
@@ -354,16 +355,35 @@ export default function Header() {
       <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
         <Box sx={{ width: 260, p: 1 }}>
           <List>
-            <ListItem
+            {/*<ListItem 
               button
               onClick={handleShopClick}
               sx={{ justifyContent: "space-between" }}
             >
               <ListItemText primary="Shop" />
               {anchorEl ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+            </ListItem> */}
+
+            <ListItem disablePadding>
+              <ListItemButton onClick={handleShopClick} sx={{ justifyContent: "space-between" }}>
+                <ListItemText primary="Shop" />
+                {anchorEl ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+              </ListItemButton>
             </ListItem>
+
             <Divider sx={{ my: 1 }} />
-            <ListItem button>
+
+            <ListItem disablePadding>              
+                <ListItemText primary="On Sale" />                              
+            </ListItem>
+            <ListItem disablePadding>              
+                <ListItemText primary="New Arrivals" />                              
+            </ListItem>
+            <ListItem disablePadding>              
+                <ListItemText primary="Brands" />                              
+            </ListItem>
+
+            {/*<ListItem button>
               <ListItemText primary="On Sale" />
             </ListItem>
             <ListItem button>
@@ -371,7 +391,8 @@ export default function Header() {
             </ListItem>
             <ListItem button>
               <ListItemText primary="Brands" />
-            </ListItem>
+            </ListItem>*/}
+            
           </List>
         </Box>
       </Drawer>
