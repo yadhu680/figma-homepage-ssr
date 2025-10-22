@@ -19,16 +19,32 @@ type Props = {
 export default function ProductCard({ id, name, price, image, originalPrice, discount, rating }: Props) {
   return (
     <Card role="article" aria-labelledby={`product-${id}-title`} tabIndex={0}
-      sx={{ backgroundColor: "#FFFFFF", boxShadow: 0, width: "100%" }}>
+      sx={{ 
+        backgroundColor: "#FFFFFF", 
+        boxShadow: 0, 
+        width: "100%" 
+      }}>
 
       <CardMedia component="img"
-        sx={{ width: { xs: 175, md: 295 }, height: { xs: 200, md: 298 }, objectFit: "cover", borderRadius: 2 }}
-        image={image || "/images/placeholder.png"} alt={name} loading="lazy"
+        sx={{ 
+          width: { xs: "100%", md: "100%" }, 
+          height: { xs: 200, md: 298 }, 
+          objectFit: "cover", 
+          borderRadius: 2,
+          
+        }}
+        image={image} alt={name} loading="lazy"
       />
 
       <CardContent sx={{ px: 0, pt: 1.5, pb: 0 }}>
         <Typography id={`product-${id}-title`} variant="subtitle1"
-        sx={{ fontWeight: 700, fontSize: { xs: 16, md: 20 }, fontStyle: "bold", lineHeight: "100%", textAlign: "left" }}
+        sx={{ 
+          fontWeight: 700, 
+          fontSize: { xs: 16, md: 20 }, 
+          fontStyle: "bold", 
+          lineHeight: "100%", 
+          textAlign: "left" 
+        }}
         >{name}</Typography>
         
         <Box
@@ -39,7 +55,12 @@ export default function ProductCard({ id, name, price, image, originalPrice, dis
           sx={{ display: "flex", width: 110, height: "auto", textAlign: "left", my: 1 }}
         /> 
 
-        <Box sx={{ display: 'flex', alignItems: 'center', mt: 0.5, gap: 1 }}>
+        <Box sx={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              mt: 0.5, 
+              gap: 1 
+            }}>
           <Typography variant="body2" sx={{ fontWeight: 600, fontSize: { xs: 16, md: 20 } }}>
             ${price?.toFixed(2)}
           </Typography>

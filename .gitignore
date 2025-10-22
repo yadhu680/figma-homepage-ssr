@@ -2,8 +2,8 @@
     node_modules/
 
     # Next.js build output
-    .next/
-    out/
+    .next
+    out
 
     # Environment variables
     .env
@@ -22,3 +22,4 @@
     # Misc
     *.DS_Store
     .swc/
+node_modules

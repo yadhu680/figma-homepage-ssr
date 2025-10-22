@@ -22,7 +22,8 @@ export default function PromoBanner() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        px: { xs: 0, md: 10.5 },
+        pl: { xs: 0, md: 5 },
+        pr: { xs: 0, md: 10 },
         background: "#000",
         height: { xs: '146px', md: '122px'}
       }}

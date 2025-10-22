@@ -1,8 +1,19 @@
 "use client";
 
 import { Box, Grid, Button, Typography } from "@mui/material";
+import NextImage from "next/image";
 
 export default function HeroSection() {
+
+  const rect6MobileWidth = 390; 
+  const rect6MobileHeight = 410;
+
+  const vectorLeftWidth = 56; // Max desktop size
+  const vectorLeftHeight = 56;
+  
+  const vectorRightWidth = 104; // Max desktop size
+  const vectorRightHeight = 104;
+
   return (
     <Box
       component="section"
@@ -12,50 +23,71 @@ export default function HeroSection() {
         position: "relative",
         overflow: "hidden",
         mb: 0,
-        mx: "calc(50% - 50vw)", // removes any parent container restriction
+        mx: "calc(50% - 50vw)",
       }}
     >
         {/* Background Images - desktop */}
         <Box
-            component="img"
-            src="/images/hero.png"
-            alt="hero image"
-            loading="lazy"
             sx={{
                 width: { xs: "390px", md: "100%" },
                 height: { xs: "448px", md: "707px" },
                 display: { xs: "none", md: "block" }, 
                 objectFit: "cover",
+                position: "relative",
             }}
-        />           
+        >
+            <NextImage
+                src="/images/hero.png"
+                alt="hero image"
+                priority
+                fill
+                sizes="100vw"
+                style={{ objectFit: "cover" }}
+            />
+        </Box>         
 
          {/* Rectangle 6 - mobile */}
         <Box
-            component="img"
-            src="/images/Rectangle_6.png"
-            alt="banner background image"
-            loading="lazy"
             sx={{
                 width: { xs: "100%", md: "0" },
                 height: { xs: "410px", md: "0" },
                 display: { xs: "block", md: "none" }, 
-                objectFit: "cover",
+                position: "relative",
             }}
-        /> 
-         {/* Rectangle 2 - mobile */}
+        >
+            <NextImage
+                src="/images/Rectangle_6.png"
+                alt="banner background image"
+                width={rect6MobileWidth} 
+                height={rect6MobileHeight}
+                style={{
+                  width: '100%', 
+                  height: '100%',
+                  objectFit: 'cover' 
+                }}
+            />
+        </Box>          
         <Box
-            component="img"
-            src="/images/Rectangle_2.png"
-            alt="mobile banner image"
-            loading="lazy"
             sx={{
                 width: { xs: "100%" },
+                height: { xs: "495px" },
                 display: { xs: "block", md: "none" }, 
-                objectFit: "cover",
+                position: "relative",
             }}
-        />     
-
-      {/* Overlay Content */}
+        >           
+             <NextImage
+                src="/images/Rectangle_2.png"
+                alt="mobile banner image"
+                width={390}
+                height={300}
+                style={{ 
+                    width: '100%', 
+                    height: 'auto',
+                    objectFit: "cover" 
+                }}
+            />
+        </Box>
+      
       <Box
         className="MuiBox-root-banner-container"
         sx={{
@@ -109,34 +141,50 @@ export default function HeroSection() {
         </Typography>
         {/* Vector Image left */}
         <Box
-            component="img"
-            src="/images/vector.png"
-            alt="vector image"
-            loading="lazy"
             sx={{
                 width: { xs: 44, md: 56 },
                 height: { xs: 44, md: 56 },      
                 position: "absolute",
                 top: { xs: 520, md: 200 },
                 right: { xs: 297, md: -260 },          
-                objectFit: "cover",
+                zIndex: 1,
             }}
-        /> 
+        >
+            <NextImage
+                src="/images/vector.png"
+                alt="vector image"
+                width={vectorLeftWidth} 
+                height={vectorLeftHeight}
+                style={{
+                  width: '100%', 
+                  height: '100%',
+                  objectFit: 'contain'
+                }}
+            />
+        </Box> 
         {/* Vector Image right */}
         <Box
-            component="img"
-            src="/images/vector.png"
-            alt="vector image"
-            loading="lazy"
             sx={{
                 width: { xs: 76, md: 104 },
                 height: { xs: 76, md: 104 },      
                 position: "absolute",
                 top: { xs: 425, md: -30 },
                 right: { xs: 0, md: -850 },          
-                objectFit: "cover",
+                zIndex: 1,
             }}
-        /> 
+        >
+            <NextImage
+                src="/images/vector.png"
+                alt="vector image"
+                width={vectorRightWidth} 
+                height={vectorRightHeight}
+                style={{
+                  width: '100%', 
+                  height: '100%',
+                  objectFit: 'contain'
+                }}
+            />
+        </Box> 
         <Button
           sx={{
             backgroundColor: "text.primary",
@@ -212,7 +260,6 @@ export default function HeroSection() {
                 </Grid>
             ))}
             </Grid>
-
         </Box>
     </Box>
   );
