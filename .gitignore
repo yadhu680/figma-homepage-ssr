@@ -1,6 +1,6 @@
     # Dependency directories
-    node_modules/
-
+    node_modules
+    .ignored_node_modules
     # Next.js build output
     .next
     out
@@ -22,4 +22,4 @@
     # Misc
     *.DS_Store
     .swc/
-node_modules
+
