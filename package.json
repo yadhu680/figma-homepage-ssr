@@ -2,15 +2,13 @@
   "name": "figma-homepage-ssr",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://yadhu680.github.io/figma-homepage-ssr",
   "description": "Next.js 15 SSR homepage based on Figma design using React 19 and MUI v7",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "type-check": "tsc --noEmit"
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
@@ -30,6 +28,7 @@
     "eslint-config-next": "^15.0.0",
     "eslint-plugin-react": "^7.37.0",
     "eslint-plugin-react-hooks": "^7.0.0",
+    "gh-pages": "^6.3.0",
     "prettier": "^3.3.3",
     "typescript": "^5.6.3"
   },

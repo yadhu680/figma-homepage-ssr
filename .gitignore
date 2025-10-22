@@ -3,7 +3,7 @@
 
 # pnpm workspace ignored folder
 .ignored_node_modules
-
+out
 # Logs and caches
 node_modules
 npm-debug.log*
