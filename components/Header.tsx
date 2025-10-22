@@ -373,13 +373,13 @@ export default function Header() {
 
             <Divider sx={{ my: 1 }} />
 
-            <ListItem disablePadding>              
+            <ListItem>              
                 <ListItemText primary="On Sale" />                              
             </ListItem>
-            <ListItem disablePadding>              
+            <ListItem>              
                 <ListItemText primary="New Arrivals" />                              
             </ListItem>
-            <ListItem disablePadding>              
+            <ListItem>
                 <ListItemText primary="Brands" />                              
             </ListItem>
 
