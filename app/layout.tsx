@@ -1,7 +1,8 @@
 import './globals.css';
-import Header from "../components/Header";
+
 import Footer from "../components/Footer";
 import Providers from "../components/Providers";
+import HeaderShell from "../components/header/HeaderShell";
 
 export const metadata = {
   title: "Homepage",
@@ -14,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         {/* Providers sets up MUI theme and caches on client */}
         <Providers>
-          <Header />
+          <HeaderShell />
           <main id="main-content">{children}</main>
           <Footer />
         </Providers>

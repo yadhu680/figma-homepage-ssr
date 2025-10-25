@@ -1,6 +1,5 @@
 "use client";
 
-//import React from "react";
 import {
   Box,
   Grid,
@@ -33,9 +32,10 @@ export default function NewsletterWidget() {
         {/* Left column - Title */}
         <Grid size={{ xs: 12, md: 6 }}>
           <Typography
-            variant="h5"
+            variant="h4"
             sx={{
               fontFamily: "Integral CF, sans-serif",
+              fontDisplay: "swap",
               textTransform: "uppercase",
               fontWeight: 700,
               textWrap: "wrap",
@@ -74,6 +74,10 @@ export default function NewsletterWidget() {
             <TextField
               placeholder="Enter your email address"
               variant="outlined"
+              sx={{
+                flexGrow: { xs: 0, sm: 1 },
+                minWidth: { xs: "100%", sm: '200px', md: '300px' },
+              }}
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">

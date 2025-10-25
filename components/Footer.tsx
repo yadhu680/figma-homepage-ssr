@@ -2,6 +2,7 @@
 
 import { Box, Grid, Typography, Link, Container } from "@mui/material";
 import NewsletterWidget from "../components/NewsletterWidget";
+import Image from "next/image";
 
 // --- Data Structure for Footer Links ---
 const footerLinks = [
@@ -63,6 +64,7 @@ export default function FooterWidget() {
                                 sx={{
                                   fontWeight: "bold",
                                   fontFamily: "Integral CF, sans-serif",
+                                  fontDisplay: "swap",
                                   fontSize: "30px"
                                 }}
                                  >
@@ -80,13 +82,15 @@ export default function FooterWidget() {
                                 </Typography>
                             </Box>
                             
-                            {/* Social Icons */}
-                            <Box
-                              component="img"
-                              src={`/images/social.png`}
-                              alt={`Social Icons`}     
-                              loading="lazy"                         
+                            {/* Social Icons */}                            
+                            <Image 
+                                src={`/images/social.png`}
+                                alt={`Social Icons`}
+                                width={148}
+                                height={29}           
+                                style={{ objectFit: "contain" }}
                             />
+                            
                         </Grid>
                         
                         {footerLinks.map((col, index) => (
@@ -149,13 +153,14 @@ export default function FooterWidget() {
                             </Typography>
                         </Grid>
 
-                        {/* Payment Icons */}                        
-                        <Box
-                          component="img"
-                          src={`/images/payments.png`}
-                          alt={`Payment Cards`}     
-                          loading="lazy"                         
-                        />                        
+                        {/* Payment Icons */}                                                   
+                        <Image 
+                            src={`../images/payments.png`}
+                            alt={`Payment Cards`}
+                            width={257}
+                            height={42}           
+                            style={{ objectFit: "contain" }}
+                        />                    
                     </Grid>
                 </Container>
             </Box>

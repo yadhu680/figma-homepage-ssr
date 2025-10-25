@@ -1,64 +1,78 @@
-//import * as React from "react";
+"use client";
+
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
+import Image from "next/image";
+
+const BRANDS = [  
+  { name: "Versace", logo: "/images/promos/versace.png", maxWidth: 167, maxHeight: 34 },
+  { name: "Zara", logo: "/images/promos/zara.png", maxWidth: 91, maxHeight: 38 },
+  { name: "Gucci", logo: "/images/promos/gucci.png", maxWidth: 156, maxHeight: 36 },
+  { name: "Prada", logo: "/images/promos/prada.png", maxWidth: 194, maxHeight: 32 },
+  { name: "Calvin Klein", logo: "/images/promos/calvin.png", maxWidth: 207, maxHeight: 34 },
+];
+
+const MAX_IMAGE_WIDTH = Math.max(...BRANDS.map(b => b.maxWidth));
+const MAX_IMAGE_HEIGHT = Math.max(...BRANDS.map(b => b.maxHeight));
 
 export default function PromoBanner() {
-
-  const brands = [
-    { name: "Versace", logo: "/images/promos/versace.png", width: {xs: "116.74px", md: "166.48px"}, height: {xs: "23.25px", md: "33.16px"} },
-    { name: "Zara", logo: "/images/promos/zara.png", width: {xs: "63.81px", md: "91px"}, height: {xs: "26.65px", md: "38px"} },
-    { name: "Gucci", logo: "/images/promos/gucci.png", width: {xs: "109.39px", md: "156px"}, height: {xs: "25.24px", md: "36px"} },
-    { name: "Prada", logo: "/images/promos/prada.png", width: {xs: "127px", md: "194px"}, height: {xs: "21px", md: "32px"} },
-    { name: "Calvin Klein", logo: "/images/promos/calvin.png", width: {xs: "127px", md: "206.79px"}, height: {xs: "21px", md: "33.35px"} },
-  ];
-
   return (
     <Box
       component="section"
       role="promo-banner"
-      aria-labelledby="promo banner"
+      aria-label="Featured Brands Banner"
       sx={{
         width: "100%",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        pl: { xs: 0, md: 5 },
-        pr: { xs: 0, md: 10 },
+        px: { xs: 2, md: 11.5},
         background: "#000",
-        height: { xs: '146px', md: '122px'}
+        height: { xs: '146px', md: '122px'},
+        overflow: 'hidden',
       }}
     >
       <Box
         sx={{
           width: "100%",
           maxWidth: 1440,
-          mx: "auto", // center the content
+          mx: "auto",
         }}
       >
         <Grid
           container
-          spacing={{ xs: 2, md: 4 }}
+          spacing={{ xs: 2, md: 17.5 }}
           justifyContent={{ xs: "space-evenly", md: "space-between" }}
           alignItems="center"
         >
-          {brands.map((brand, index) => (
+          {BRANDS.map((brand) => (
             <Grid              
-              key={index}              
-              size={{ xs: 4, md: 2.4, sm: 4 }}
+              key={brand.name}              
+              size={{ xs: 4, sm: 4, md: 2.4 }}
               sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
             >
-              <Box
-                component="img"
-                src={brand.logo}
-                alt={brand.name}
-                loading="lazy"
-                sx={{
-                  maxHeight: { xs: 60, md: 80 },
-                  width: { xs: brand.width.xs, md: brand.width.md },
-                  height: { xs: brand.height.xs, md: brand.height.md },
-                  objectFit: "contain",
-                }}
-              />
+              <Box 
+                sx={{                    
+                    maxWidth: { xs: '127px', md: `${brand.maxWidth}px` },
+                    maxHeight: { xs: '33px', md: `${brand.maxHeight}px` },                                        
+                    width: '100%', 
+                    height: { xs: '34px', md: '38px' }, 
+                    position: "relative",
+                  }}
+                >
+                <Image 
+                  src={brand.logo}
+                  alt={`${brand.name} logo`}                  
+                  width={MAX_IMAGE_WIDTH} 
+                  height={MAX_IMAGE_HEIGHT}                  
+                  sizes="(max-width: 600px) 33vw, (max-width: 900px) 20vw, 15vw"                                    
+                  style={{ 
+                    objectFit: "contain",                   
+                    width: "100%", 
+                    height: "100%"
+                  }}
+                />
+              </Box>
             </Grid>
           ))}
         </Grid>

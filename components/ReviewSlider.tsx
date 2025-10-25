@@ -14,6 +14,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { motion } from "framer-motion";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import Image from "next/image";
 
 interface Review {
   id: number;
@@ -79,6 +80,7 @@ const ReviewSlider: React.FC<ReviewSliderProps> = ({
             fontSize: { xs: 32, md: 48 },
             fontWeight: 700,
             fontFamily: "Integral CF, sans-serif",
+            fontDisplay: "swap",
             textTransform: "uppercase",
             mr: 2,
           }}
@@ -113,9 +115,9 @@ const ReviewSlider: React.FC<ReviewSliderProps> = ({
 
           // Apply blur only on desktop for left/right edges
           if (!isMobile && (index === 0 || index === frameReviews.length - 1)) {
-            opacity = 0.6;
-            scale = 0.9;
-            filter = "blur(2px)";
+            opacity = 0.9;
+            scale = 1;
+            filter = "blur(1.9px)";
           }
 
           return (
@@ -151,17 +153,20 @@ const ReviewSlider: React.FC<ReviewSliderProps> = ({
                     justifyContent: "space-between",
                     height: "100%",
                     fontFamily: "Satoshi, sans-serif",
+                    fontDisplay: "swap",
                   }}
                 >
                   <Box>
-                    <Typography variant="caption">
+                    <Typography variant="caption">                      
                       <Box
-                        component="img"
-                        src={`/images/rating_star.png`}
-                        alt={`Review Rating`}
-                        loading="lazy"
-                        sx={{ display: "flex", width: 110, textAlign: "left", my: 1 }}
-                      />
+                        sx={{ display: "flex", width: 100, height: 16, textAlign: "left", my: 1, position: "relative" }}
+                        >
+                        <Image 
+                          src={`/images/rating_star.png`}
+                          alt={`Review Rating`}
+                          fill                          
+                        />
+                      </Box>
                     </Typography>
                     <Typography
                       variant="subtitle2"

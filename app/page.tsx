@@ -20,12 +20,12 @@ async function fetchProducts(): Promise<{ newArrivals: Product[]; topSelling: Pr
   return {
     newArrivals: [
       { id: "p1", name: "T-shirt with Tape Details", price: 120, originalPrice: 120, image: "/images/p1.png", discount: 0, rating: "4.5" },
-      { id: "p2", name: "Skinny Fit Jeans", price: 240, originalPrice: 260, image: "/images/p2.png", discount: -20, rating: "3.5" },
+      { id: "p2", name: "Skinny Fit Jeans", price: 240, originalPrice: 260, image: "/images/p2.png", discount: 20, rating: "3.5" },
       { id: "p3", name: "Checkered Shirt", price: 180, originalPrice: 180, image: "/images/p3.png", discount: 0, rating: "4.5" },
-      { id: "p4", name: "Sleeve Striped T-shirt", price: 130, originalPrice: 160, image: "/images/p4.png", discount: -30, rating: "4.5" },
+      { id: "p4", name: "Sleeve Striped T-shirt", price: 130, originalPrice: 160, image: "/images/p4.png", discount: 30, rating: "4.5" },
     ],
     topSelling: [
-      { id: "p5", name: "Vertical Striped Shirt", price: 212, originalPrice: 232, image: "/images/p5.png", discount: -20, rating: "5.0" },
+      { id: "p5", name: "Vertical Striped Shirt", price: 212, originalPrice: 232, image: "/images/p5.png", discount: 20, rating: "5.0" },
       { id: "p6", name: "Courage Graphic T-shirt", price: 145, originalPrice: 145, image: "/images/p6.png", discount: 0, rating: "4.0" },
       { id: "p7", name: "Loose Fit Bermuda Shorts", price: 80, originalPrice: 80, image: "/images/p7.png", discount: 0, rating: "3.0" },
       { id: "p8", name: "Faded Skinny Jeans", price: 210, originalPrice: 210, image: "/images/p8.png", discount: 0, rating: "4.5" },
@@ -68,7 +68,7 @@ export default async function Page() {
   ];
 
   return (
-    <Box sx={{ width: "100%", mt: 4 }}>
+    <Box sx={{ width: "100%" }}>
       <HeroSection />
       <PromoBanner />
 

@@ -1,15 +1,19 @@
 import type { NextConfig } from "next";
 
-const repo = "figma-homepage-ssr";
+const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig: NextConfig = {
-  output: "export",
-  basePath: `/${repo}`,
-  assetPrefix: `/${repo}/`,
-  images: {
-    unoptimized: true,
-  },
-  trailingSlash: true,
+  ...(isProd
+    ? {
+        output: "export", // only for production
+        basePath: "/figma-homepage-ssr",
+        assetPrefix: "/figma-homepage-ssr/",
+        images: { unoptimized: true, qualities: [75, 80], },
+      }
+    : {
+        reactStrictMode: true,
+        images: { unoptimized: true, qualities: [75, 80], },
+      }),
 };
 
 export default nextConfig;

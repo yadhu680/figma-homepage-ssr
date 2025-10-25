@@ -84,6 +84,7 @@ export default function ProductGrid({ heading, products }: ProductGridProps) {
               fontSize: { xs: 14, md: 16 },
               fontWeight: 500,
               fontFamily: "Satoshi, sans-serif",
+              fontDisplay: "swap",
               textTransform: "none",
               "&:hover": {
                 backgroundColor: "text.primary",
