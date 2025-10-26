@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
     ? {
         output: "export", // only for production
         basePath: "/figma-homepage-ssr",
-        assetPrefix: "/figma-homepage-ssr/",
+        assetPrefix: "https://yadhu680.github.io/figma-homepage-ssr/",
         images: { unoptimized: true, qualities: [75, 80], },
       }
     : {
