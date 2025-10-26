@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Integral CF';
-  src: url('/fonts/IntegralCF-Regular.otf') format('opentype');
+  src: url('/figma-homepage-ssr/fonts/IntegralCF-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'Integral CF';
-  src: url('/fonts/IntegralCF-Bold.otf') format('opentype');
+  src: url('/figma-homepage-ssr/fonts/IntegralCF-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'Satoshi';
-  src: url('/fonts/Satoshi-Regular.otf') format('opentype');
+  src: url('/figma-homepage-ssr/fonts/Satoshi-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: 'Satoshi';
-  src: url('/fonts/Satoshi-Bold.otf') format('opentype');
+  src: url('/figma-homepage-ssr/fonts/Satoshi-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
