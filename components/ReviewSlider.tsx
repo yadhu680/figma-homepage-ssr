@@ -162,7 +162,7 @@ const ReviewSlider: React.FC<ReviewSliderProps> = ({
                         sx={{ display: "flex", width: 100, height: 16, textAlign: "left", my: 1, position: "relative" }}
                         >
                         <Image 
-                          src={`/images/rating_star.png`}
+                          src={`/figma-homepage-ssr/images/rating_star.png`}
                           alt={`Review Rating`}
                           fill                          
                         />

@@ -3,20 +3,21 @@
 import { Box, Grid, Typography, Card, useMediaQuery, useTheme } from "@mui/material";
 import Image from "next/image";
 
+const imagePath = "/figma-homepage-ssr/images/categories/";
+const categories = [        
+    { title: "Casual", Deskimage: `${imagePath}casual_desk.png`, Mobimage: `${imagePath}casual_mob.png`, mdWidth: 3 },
+    { title: "Formal", Deskimage: `${imagePath}formal_desk.png`, Mobimage: `${imagePath}formal_mob.png`, mdWidth: 5 },
+    { title: "Party", Deskimage: `${imagePath}party_desk.png`, Mobimage: `${imagePath}party_mob.png`, mdWidth: 5 },
+    { title: "Gym", Deskimage: `${imagePath}gym_desk.png`, Mobimage: `${imagePath}gym_mob.png`, mdWidth: 3 },
+];
+
+const MAX_WIDTH = 500; 
+const MAX_HEIGHT = 240; 
+
 export default function CategoryWidget() {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-
-    const imagePath = "/images/categories/";
-    const categories = [        
-        { title: "Casual", Deskimage: `${imagePath}casual_desk.png`, Mobimage: `${imagePath}casual_mob.png`, mdWidth: 3 },
-        { title: "Formal", Deskimage: `${imagePath}formal_desk.png`, Mobimage: `${imagePath}formal_mob.png`, mdWidth: 5 },
-        { title: "Party", Deskimage: `${imagePath}party_desk.png`, Mobimage: `${imagePath}party_mob.png`, mdWidth: 5 },
-        { title: "Gym", Deskimage: `${imagePath}gym_desk.png`, Mobimage: `${imagePath}gym_mob.png`, mdWidth: 3 },
-    ];
-
-    const MAX_WIDTH = 500; 
-    const MAX_HEIGHT = 240; 
+    
 
     return (
         <Box

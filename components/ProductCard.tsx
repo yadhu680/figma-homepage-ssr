@@ -26,7 +26,7 @@ export default function ProductCard({
 }: Props) {
   const hasDiscount = typeof discount === "number" && discount > 0;
   const isImageAvailable = typeof image === "string" && image.length > 0;
-  const ratingImagePath = rating ? `/images/rating_${rating}.png` : "";
+  const ratingImagePath = rating ? `/figma-homepage-ssr/images/rating_${rating}.png` : "";
 
   return (
     <Card

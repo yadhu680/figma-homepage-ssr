@@ -84,7 +84,7 @@ export default function FooterWidget() {
                             
                             {/* Social Icons */}                            
                             <Image 
-                                src={`/images/social.png`}
+                                src={`/figma-homepage-ssr/images/social.png`}
                                 alt={`Social Icons`}
                                 width={148}
                                 height={29}           
@@ -155,7 +155,7 @@ export default function FooterWidget() {
 
                         {/* Payment Icons */}                                                   
                         <Image 
-                            src={`../images/payments.png`}
+                            src={`/figma-homepage-ssr/images/payments.png`}
                             alt={`Payment Cards`}
                             width={257}
                             height={42}           
