@@ -1,10 +1,16 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {  
-  output: 'export',    
-  basePath: '/figma-homepage-ssr',     
-  trailingSlash: true,    
-  images: { unoptimized: true, qualities: [75, 80] },
+const repoName = "figma-homepage-ssr";
+
+const nextConfig: NextConfig = {
+  output: "export",
+  basePath: `/${repoName}`,
+  assetPrefix: `/${repoName}/`,
+  images: {
+    unoptimized: true,
+    qualities: [75, 80],
+  },
+  trailingSlash: true,
 };
 
-module.exports = nextConfig;
+export default nextConfig;
