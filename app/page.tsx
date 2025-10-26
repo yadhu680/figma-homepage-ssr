@@ -22,7 +22,7 @@ async function fetchProducts(): Promise<{ newArrivals: Product[]; topSelling: Pr
       { id: "p1", name: "T-shirt with Tape Details", price: 120, originalPrice: 120, image: "/figma-homepage-ssr/images/p1.png", discount: 0, rating: "4.5" },
       { id: "p2", name: "Skinny Fit Jeans", price: 240, originalPrice: 260, image: "/figma-homepage-ssr/images/p2.png", discount: 20, rating: "3.5" },
       { id: "p3", name: "Checkered Shirt", price: 180, originalPrice: 180, image: "/figma-homepage-ssr/images/p3.png", discount: 0, rating: "4.5" },
-      { id: "p4", name: "Sleeve Striped T-shirt", price: 130, originalPrice: 160, image: "/images/p4.png", discount: 30, rating: "4.5" },
+      { id: "p4", name: "Sleeve Striped T-shirt", price: 130, originalPrice: 160, image: "/figma-homepage-ssr/images/p4.png", discount: 30, rating: "4.5" },
     ],
     topSelling: [
       { id: "p5", name: "Vertical Striped Shirt", price: 212, originalPrice: 232, image: "/figma-homepage-ssr/images/p5.png", discount: 20, rating: "5.0" },
