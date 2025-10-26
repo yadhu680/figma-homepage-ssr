@@ -5,10 +5,10 @@ import Image from "next/image";
 
 const imagePath = "/figma-homepage-ssr/images/categories/";
 const categories = [        
-    { title: "Casual", Deskimage: `${imagePath}casual_desk.png`, Mobimage: `${imagePath}casual_mob.png`, mdWidth: 3 },
-    { title: "Formal", Deskimage: `${imagePath}formal_desk.png`, Mobimage: `${imagePath}formal_mob.png`, mdWidth: 5 },
-    { title: "Party", Deskimage: `${imagePath}party_desk.png`, Mobimage: `${imagePath}party_mob.png`, mdWidth: 5 },
-    { title: "Gym", Deskimage: `${imagePath}gym_desk.png`, Mobimage: `${imagePath}gym_mob.png`, mdWidth: 3 },
+    { title: "Casual", Deskimage: `${imagePath}casual_desk.PNG`, Mobimage: `${imagePath}casual_mob.PNG`, mdWidth: 3 },
+    { title: "Formal", Deskimage: `${imagePath}formal_desk.PNG`, Mobimage: `${imagePath}formal_mob.PNG`, mdWidth: 5 },
+    { title: "Party", Deskimage: `${imagePath}party_desk.PNG`, Mobimage: `${imagePath}party_mob.PNG`, mdWidth: 5 },
+    { title: "Gym", Deskimage: `${imagePath}gym_desk.PNG`, Mobimage: `${imagePath}gym_mob.PNG`, mdWidth: 3 },
 ];
 
 const MAX_WIDTH = 500; 
