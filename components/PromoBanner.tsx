@@ -6,11 +6,11 @@ import Image from "next/image";
 
 const repoName = "/figma-homepage-ssr/";
 const BRANDS = [
-  { name: "Versace", logo: `${repoName}images/promos/versace.png`, maxWidth: 167, maxHeight: 34 },
-  { name: "Zara", logo: `${repoName}images/promos/zara.png`, maxWidth: 91, maxHeight: 38 },
-  { name: "Gucci", logo: `${repoName}images/promos/gucci.png`, maxWidth: 156, maxHeight: 36 },
-  { name: "Prada", logo: `${repoName}images/promos/prada.png`, maxWidth: 194, maxHeight: 32 },
-  { name: "Calvin Klein", logo: `${repoName}images/promos/calvin.png`, maxWidth: 207, maxHeight: 34 },
+  { name: "Versace", logo: `${repoName}images/promos/versace.webp`, maxWidth: 167, maxHeight: 34 },
+  { name: "Zara", logo: `${repoName}images/promos/zara.webp`, maxWidth: 91, maxHeight: 38 },
+  { name: "Gucci", logo: `${repoName}images/promos/gucci.webp`, maxWidth: 156, maxHeight: 36 },
+  { name: "Prada", logo: `${repoName}images/promos/prada.webp`, maxWidth: 194, maxHeight: 32 },
+  { name: "Calvin Klein", logo: `${repoName}images/promos/calvin.webp`, maxWidth: 207, maxHeight: 34 },
 ];
 
 const MAX_IMAGE_WIDTH = Math.max(...BRANDS.map(b => b.maxWidth));
@@ -19,8 +19,7 @@ const MAX_IMAGE_HEIGHT = Math.max(...BRANDS.map(b => b.maxHeight));
 export default function PromoBanner() {
   return (
     <Box
-      component="section"
-      role="promo-banner"
+      component="section"      
       aria-label="Featured Brands Banner"
       sx={{
         width: "100%",

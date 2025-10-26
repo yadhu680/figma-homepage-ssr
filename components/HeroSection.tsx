@@ -38,7 +38,7 @@ function HeroSection() {
         }}
       >
         <NextImage
-          src="/figma-homepage-ssr/images/hero.png"
+          src="/figma-homepage-ssr/images/hero.webp"
           alt="hero image"
           fill
           priority
@@ -60,7 +60,7 @@ function HeroSection() {
   }}
 >
   <NextImage
-    src="/figma-homepage-ssr/images/Rectangle_6.png"
+    src="/figma-homepage-ssr/images/Rectangle_6.webp"
     alt="banner background image"
     fill
     quality={75}
@@ -82,7 +82,7 @@ function HeroSection() {
         }}
       >
         <NextImage
-          src="/figma-homepage-ssr/images/Rectangle_2.png"
+          src="/figma-homepage-ssr/images/Rectangle_2.webp"
           alt="mobile banner image"
           width={390}
           height={300}
@@ -153,7 +153,7 @@ function HeroSection() {
           }}
         >
           <NextImage
-            src="/figma-homepage-ssr/images/vector.png"
+            src="/figma-homepage-ssr/images/vector.webp"
             alt="vector left"
             width={VECTOR_LEFT.width}
             height={VECTOR_LEFT.height}
@@ -174,7 +174,7 @@ function HeroSection() {
           }}
         >
           <NextImage
-            src="/figma-homepage-ssr/images/vector.png"
+            src="/figma-homepage-ssr/images/vector.webp"
             alt="vector right"
             width={VECTOR_RIGHT.width}
             height={VECTOR_RIGHT.height}

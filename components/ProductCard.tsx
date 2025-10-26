@@ -26,7 +26,7 @@ export default function ProductCard({
 }: Props) {
   const hasDiscount = typeof discount === "number" && discount > 0;
   const isImageAvailable = typeof image === "string" && image.length > 0;
-  const ratingImagePath = rating ? `/figma-homepage-ssr/images/rating_${rating}.png` : "";
+  const ratingImagePath = rating ? `/figma-homepage-ssr/images/rating_${rating}.webp` : "";
 
   return (
     <Card
@@ -57,8 +57,8 @@ export default function ProductCard({
             <Image
             src={image}
             alt={name}
-            width={400} 
-            height={400}
+            width={230} 
+            height={232}
             style={{
                 width: "100%",
                 height: "auto",
@@ -68,6 +68,7 @@ export default function ProductCard({
             quality={80}
             loading="lazy"
             sizes="(max-width: 600px) 50vw, (max-width: 1200px) 25vw, 20vw"
+            priority={true}
             />
         ) : (
             <Box
@@ -93,6 +94,7 @@ export default function ProductCard({
         <Typography
           id={`product-${id}-title`}
           variant="h6"
+          component="h3"
           sx={{
             fontWeight: 700,
             fontSize: { xs: 16, md: 20 },
@@ -131,9 +133,9 @@ export default function ProductCard({
           <Typography
             variant="body1"
             sx={{
-              fontWeight: 600,
+              fontWeight: 500,
               fontSize: { xs: 16, md: 20 },
-              color: hasDiscount ? "#FF3333" : "text.primary",
+              color: "text.primary",
             }}
           >
             ${price?.toFixed(2)}
@@ -158,7 +160,7 @@ export default function ProductCard({
                 sx={{
                   fontWeight: 400,
                   fontSize: { xs: 11, md: 12 },
-                  color: "#FF3333",
+                  color: "#b00020",
                   padding: "3px 6px",
                   backgroundColor: "#FFEAEA",
                   borderRadius: "62px",

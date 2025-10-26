@@ -60,7 +60,7 @@ export default function FooterWidget() {
                     <Grid container spacing={{ xs: 2, md: 2 }}>                                                                                               
                         <Grid size={{ xs: 12 }} sx={{ width: { xs: "100%", md: "30%" } }}>
                             <Box sx={{ mb: 2 }}>
-                                <Typography variant="h6" 
+                                <Typography variant="subtitle2" component="h4"
                                 sx={{
                                   fontWeight: "bold",
                                   fontFamily: "Integral CF, sans-serif",
@@ -84,7 +84,7 @@ export default function FooterWidget() {
                             
                             {/* Social Icons */}                            
                             <Image 
-                                src={`/figma-homepage-ssr/images/social.png`}
+                                src={`/figma-homepage-ssr/images/social.webp`}
                                 alt={`Social Icons`}
                                 width={148}
                                 height={29}           
@@ -155,7 +155,7 @@ export default function FooterWidget() {
 
                         {/* Payment Icons */}                                                   
                         <Image 
-                            src={`/figma-homepage-ssr/images/payments.png`}
+                            src={`/figma-homepage-ssr/images/payments.webp`}
                             alt={`Payment Cards`}
                             width={257}
                             height={42}           

@@ -89,11 +89,11 @@ const ReviewSlider: React.FC<ReviewSliderProps> = ({
         </Typography>
 
         {/* Arrows */}
-        <Box sx={{ flexShrink: 0, display: "flex", alignItems: "baseline" }}>
-          <IconButton onClick={prevSlide} size="small">
+        <Box sx={{ flexShrink: 0, display: "flex", alignItems: "baseline" }} role="group" aria-label="Carousel navigation">
+          <IconButton onClick={prevSlide} size="small" aria-label="Previous slide">
             <ArrowBackIcon fontSize="small" sx={{ color: "text.primary" }} />
           </IconButton>
-          <IconButton onClick={nextSlide} size="small">
+          <IconButton onClick={nextSlide} size="small" aria-label="Next slide">
             <ArrowForwardIcon fontSize="small" sx={{ color: "text.primary" }} />
           </IconButton>
         </Box>
@@ -162,7 +162,7 @@ const ReviewSlider: React.FC<ReviewSliderProps> = ({
                         sx={{ display: "flex", width: 100, height: 16, textAlign: "left", my: 1, position: "relative" }}
                         >
                         <Image 
-                          src={`/figma-homepage-ssr/images/rating_star.PNG`}
+                          src={`/figma-homepage-ssr/images/rating_star.webp`}
                           alt={`Review Rating`}
                           fill                          
                         />

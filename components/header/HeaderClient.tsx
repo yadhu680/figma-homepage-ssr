@@ -92,7 +92,8 @@ export default function HeaderClient() {
               </IconButton>
             )}
             <Typography
-              variant="h6"
+              variant="subtitle2"
+              component="h4"
               sx={{
                 fontFamily: "Integral CF, sans-serif",
                 fontDisplay: "swap",
