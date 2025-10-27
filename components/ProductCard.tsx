@@ -148,7 +148,7 @@ export default function ProductCard({
                 sx={{
                   fontWeight: 600,
                   fontSize: { xs: 14, md: 16 },
-                  color: "#2B2B2B",
+                  color: "#666666",
                   textDecoration: "line-through",
                 }}
               >
