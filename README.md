@@ -42,7 +42,7 @@ pnpm dev
 Then open your browser at
 👉 http://localhost:3000
 
-Build for Production
+🏗️ Build for Production
 
 To generate a production build:
 
@@ -62,10 +62,11 @@ pnpm start
 
 ```bash
 Node.js ≥ 18
-
 pnpm ≥ 10.17.1
 ```
 
 📸 Preview
+
+👉 <a href="https://yadhu680.github.io/figma-homepage-ssr/" target="_blank">Preview</a>
 
 <img src="./public/images/preview.png" width="800" alt="Preview of Figma Homepage SSR" />

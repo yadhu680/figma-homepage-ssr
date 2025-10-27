@@ -107,11 +107,12 @@ export default function FooterWidget() {
                                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5}}>
                                     {col.links.map((linkText) => (
                                         <Link 
-                                            href="javascript: void(0)" 
+                                            href="#"
                                             key={linkText} 
                                             variant="body2" 
-                                            color="#727272"
+                                            color="#2B2B2B"
                                             fontSize="1rem" 
+                                            onClick={(e) => e.preventDefault()}
                                             sx={{ 
                                                 textDecoration: 'none', 
                                                 '&:hover': { textDecoration: 'underline' } 
