@@ -101,7 +101,7 @@ export default function FooterWidget() {
                                   width: { xs: "47%", md: "16%"}
                                 }}
                             >
-                                <Typography variant="subtitle2" component="p" fontWeight="500" color="text.primary" mb={2.5}>
+                                <Typography variant="subtitle2" component="p" fontWeight="600" color="text.primary" mb={2.5}>
                                     {col.title}
                                 </Typography>
                                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5}}>
