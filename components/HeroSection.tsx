@@ -87,7 +87,8 @@ function HeroSection() {
           width={390}
           height={300}
           quality={75}
-          loading="lazy"
+          priority
+          fetchPriority="high"
           sizes="100vw"
           style={{ width: "100%", height: "auto", objectFit: "cover" }}
         />

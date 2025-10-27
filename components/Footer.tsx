@@ -73,7 +73,7 @@ export default function FooterWidget() {
                                 <Typography variant="body2" mt={1} 
                                 sx={{ 
                                   width: { xs: "95%", md: "64%" }, 
-                                  color: "#727272",
+                                  color: "#2B2B2B",
                                   fontSize: "0.9rem"
                                 }}
                                 >
@@ -148,7 +148,7 @@ export default function FooterWidget() {
                         >
                             <Typography 
                                 variant="body2" 
-                                color="#727272"                                
+                                color="#2B2B2B"                                
                             >
                                 Shop.co &copy; 2000-2023. All Rights Reserved.
                             </Typography>
