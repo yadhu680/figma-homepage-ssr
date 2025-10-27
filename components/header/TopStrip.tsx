@@ -14,7 +14,6 @@ interface TopStripProps {
 function TopStrip({ visible, onClose, show }: TopStripProps) {  
   const isSmall = useMediaQuery("(max-width:900px)", { noSsr: true });
 
-
   if (!visible) return null;
 
   return (

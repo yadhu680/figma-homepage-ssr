@@ -45,8 +45,8 @@ header, .MuiToolbar-root {
 }
 
 .MuiSvgIcon-root.MuiSvgIcon-colorPrimary {
-    color: #000;
-  }
+  color: #000;
+}
 
 /* Use a class when you want to hide nav at smaller container widths via CSS only */
 @container (max-width: 600px) {

@@ -38,7 +38,7 @@ const ReviewSlider: React.FC<ReviewSliderProps> = ({
   const nextSlide = () => setCurrent((prev) => (prev + 1) % reviews.length);
   const prevSlide = () => setCurrent((prev) => (prev - 1 + reviews.length) % reviews.length);
   
-  const totalFrame = 5; // including partially visible edges
+  const totalFrame = 5;
 
   const getFrameReviews = () => {
     if (isMobile) {

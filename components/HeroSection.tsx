@@ -69,26 +69,26 @@ function HeroSection() {
 
       {/* Rectangle 6 - Mobile */}
       <Box
-  sx={{
-    width: { xs: "100%", md: "0" },
-    display: { xs: "block", md: "none" },
-    position: "relative",
-    overflow: "hidden",    
-    aspectRatio: "390 / 380",
-  }}
->
-  <Image
-    src="/figma-homepage-ssr/images/Rectangle_6.webp"
-    alt="banner background image"
-    fill
-    quality={75}
-    loading="lazy"
-    sizes="100vw"
-    style={{
-      objectFit: "cover",
-    }}
-  />
-</Box>
+        sx={{
+          width: { xs: "100%", md: "0" },
+          display: { xs: "block", md: "none" },
+          position: "relative",
+          overflow: "hidden",    
+          aspectRatio: "390 / 380",
+        }}
+      >
+        <Image
+          src="/figma-homepage-ssr/images/Rectangle_6.webp"
+          alt="banner background image"
+          fill
+          quality={75}
+          loading="lazy"
+          sizes="100vw"
+          style={{
+            objectFit: "cover",
+          }}
+        />
+      </Box>
 
       {/* Rectangle 2 - Mobile */}
       <Box

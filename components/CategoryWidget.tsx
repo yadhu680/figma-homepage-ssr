@@ -11,14 +11,10 @@ const categories = [
     { title: "Gym", Deskimage: `${imagePath}gym_desk.webp`, Mobimage: `${imagePath}gym_mob.webp`, mdWidth: 3 },
 ];
 
-const MAX_WIDTH = 500; 
-const MAX_HEIGHT = 240; 
-
 export default function CategoryWidget() {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("md"));
     
-
     return (
         <Box
             sx={{
@@ -101,7 +97,7 @@ export default function CategoryWidget() {
                                 priority={false}
                                 style={{
                                 width: "100%",
-                                height: "auto", // ✅ preserves natural aspect ratio
+                                height: "auto",
                                 objectFit: "cover",
                                 display: "block",
                                 }}
