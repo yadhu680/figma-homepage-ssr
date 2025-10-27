@@ -12,18 +12,15 @@ const ProductGrid = dynamic(() => import("../components/ProductGrid"), {
   ssr: true,
 });
 
-const PromoBanner = dynamic(() => import("../components/PromoBanner"), {
-  ssr: false,
+const PromoBanner = dynamic(() => import("../components/PromoBanner"), {  
   loading: () => <Shimmer height={120} />,
 });
 
-const CategoryWidget = dynamic(() => import("../components/CategoryWidget"), {
-  ssr: false,
+const CategoryWidget = dynamic(() => import("../components/CategoryWidget"), {  
   loading: () => <Shimmer height={400} />,
 });
 
-const ReviewSlider = dynamic(() => import("../components/ReviewSlider"), {
-  ssr: false,
+const ReviewSlider = dynamic(() => import("../components/ReviewSlider"), {  
   loading: () => <Shimmer height={320} />,
 });
 
