@@ -1,8 +1,9 @@
 "use client";
 
+import { useState, useEffect, memo } from "react";
 import { Box, Grid, Button, Typography } from "@mui/material";
-import NextImage from "next/image";
-import { memo } from "react";
+import Image from "next/image";
+import Skeleton from "@mui/material/Skeleton";
 
 // Constants outside component to prevent reallocation on render
 const HERO_STATS = [
@@ -13,9 +14,22 @@ const HERO_STATS = [
 
 const VECTOR_LEFT = { width: 56, height: 56 };
 const VECTOR_RIGHT = { width: 104, height: 104 };
-const RECT6_MOBILE = { width: 390, height: 410 };
 
 function HeroSection() {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {    
+    if (typeof window === "undefined") return;
+
+    const img = new window.Image();
+    img.src = "/figma-homepage-ssr/images/hero.webp";
+    img.onload = () => setLoaded(true);
+
+    return () => {      
+      img.onload = null;
+    };
+  }, []);
+
   return (
     <Box
       component="section"
@@ -37,15 +51,20 @@ function HeroSection() {
           position: "relative",
         }}
       >
-        <NextImage
-          src="/figma-homepage-ssr/images/hero.webp"
-          alt="hero image"
-          fill
-          priority
-          quality={80}
-          sizes="100vw"
-          style={{ objectFit: "cover" }}
-        />
+        {!loaded && (
+          <Skeleton variant="rectangular" width="100%" height="100%" animation="wave" />
+        )}
+        {loaded && (
+          <Image
+            src="/figma-homepage-ssr/images/hero.webp"
+            alt="hero image"
+            fill
+            priority
+            quality={80}
+            sizes="100vw"
+            style={{ objectFit: "cover" }}
+          />
+          )}
       </Box>
 
       {/* Rectangle 6 - Mobile */}
@@ -54,12 +73,11 @@ function HeroSection() {
     width: { xs: "100%", md: "0" },
     display: { xs: "block", md: "none" },
     position: "relative",
-    overflow: "hidden",
-    // ✅ maintain the image’s intrinsic aspect ratio (height / width * 100)
-    aspectRatio: "390 / 380", // or use paddingBottom: '105%'
+    overflow: "hidden",    
+    aspectRatio: "390 / 380",
   }}
 >
-  <NextImage
+  <Image
     src="/figma-homepage-ssr/images/Rectangle_6.webp"
     alt="banner background image"
     fill
@@ -81,7 +99,7 @@ function HeroSection() {
           position: "relative",
         }}
       >
-        <NextImage
+        <Image
           src="/figma-homepage-ssr/images/Rectangle_2.webp"
           alt="mobile banner image"
           width={390}
@@ -153,7 +171,7 @@ function HeroSection() {
             zIndex: 1,
           }}
         >
-          <NextImage
+          <Image
             src="/figma-homepage-ssr/images/vector.webp"
             alt="vector left"
             width={VECTOR_LEFT.width}
@@ -174,7 +192,7 @@ function HeroSection() {
             zIndex: 1,
           }}
         >
-          <NextImage
+          <Image
             src="/figma-homepage-ssr/images/vector.webp"
             alt="vector right"
             width={VECTOR_RIGHT.width}

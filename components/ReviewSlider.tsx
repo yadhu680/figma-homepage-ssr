@@ -74,7 +74,7 @@ const ReviewSlider: React.FC<ReviewSliderProps> = ({
         }}
       >
         <Typography
-          variant="h5"
+          variant="h2"
           component="h2"
           sx={{
             fontSize: { xs: 32, md: 48 },
@@ -170,7 +170,7 @@ const ReviewSlider: React.FC<ReviewSliderProps> = ({
                     </Typography>
                     <Typography
                       variant="subtitle1"
-                      component="h6"
+                      component="h3"
                       fontWeight="bold"
                       fontSize="1.2rem"
                       sx={{ display: "flex", alignItems: "center", gap: "8px" }}
